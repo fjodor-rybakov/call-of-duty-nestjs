@@ -1,0 +1,59 @@
+export interface ActivisionMwBattleDataResponse {
+  br: {
+    wins: number;
+    kills: number;
+    kdRatio: number;
+    downs: number;
+    topTwentyFive: number;
+    topTen: number;
+    contracts: number;
+    revives: number;
+    topFive: number;
+    score: number;
+    timePlayed: number;
+    gamesPlayed: number;
+    tokens: number;
+    scorePerMinute: number;
+    cash: number;
+    deaths: number;
+    title: 'br';
+  };
+  br_dmz: {
+    wins: number;
+    kills: number;
+    kdRatio: number;
+    downs: number;
+    topTwentyFive: number;
+    topTen: number;
+    contracts: number;
+    revives: number;
+    topFive: number;
+    score: number;
+    timePlayed: number;
+    gamesPlayed: number;
+    tokens: number;
+    scorePerMinute: number;
+    cash: number;
+    deaths: number;
+    title: 'br_dmz';
+  };
+  br_all: {
+    wins: number;
+    kills: number;
+    kdRatio: number;
+    downs: number;
+    topTwentyFive: number;
+    topTen: number;
+    contracts: number;
+    revives: number;
+    topFive: number;
+    score: number;
+    timePlayed: number;
+    gamesPlayed: number;
+    tokens: number;
+    scorePerMinute: number;
+    cash: number;
+    deaths: number;
+    title: 'br_all';
+  };
+}
