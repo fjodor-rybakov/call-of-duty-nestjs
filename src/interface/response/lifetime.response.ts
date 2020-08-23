@@ -1,4 +1,4 @@
-export class ActivisionMwMpResponse {
+export class LifetimeResponse {
   all: {
     properties: {
       recordLongestWinStreak: number;
@@ -64,46 +64,46 @@ export class ActivisionMwMpResponse {
     }
   };
   mode: {
-    gun: Record<string, any> | any;
-    dom: Record<string, any> | any;
-    war: Record<string, any> | any;
-    hq: Record<string, any> | any;
-    hc_dom: Record<string, any> | any;
-    hc_conf: Record<string, any> | any;
-    koth: Record<string, any> | any;
-    conf: Record<string, any> | any;
-    hc_hq: Record<string, any> | any;
-    arena: Record<string, any> | any;
-    br_dmz: Record<string, any> | any;
-    br: Record<string, any> | any;
-    sd: Record<string, any> | any;
-    grnd: Record<string, any> | any;
-    cyber: Record<string, any> | any;
-    hc_war: Record<string, any> | any;
-    br_all: Record<string, any> | any;
-    hc_sd: Record<string, any> | any;
-    arm: Record<string, any> | any;
-    hc_cyber: Record<string, any> | any;
-    infect: Record<string, any> | any
+    gun: any;
+    dom: any;
+    war: any;
+    hq: any;
+    hc_dom: any;
+    hc_conf: any;
+    koth: any;
+    conf: any;
+    hc_hq: any;
+    arena: any;
+    br_dmz: any;
+    br: any;
+    sd: any;
+    grnd: any;
+    cyber: any;
+    hc_war: any;
+    br_all: any;
+    hc_sd: any;
+    arm: any;
+    hc_cyber: any;
+    infect: any;
   };
-  map: Record<string, any> | any;
+  map: any;
   itemData: {
-    weapon_sniper: Record<string, any> | any;
-    tacticals: Record<string, any> | any;
-    lethals: Record<string, any> | any;
-    weapon_lmg: Record<string, any> | any;
-    weapon_launcher: Record<string, any> | any;
-    weapon_pistol: Record<string, any> | any;
-    weapon_assault_rifle: Record<string, any> | any;
-    weapon_other: Record<string, any> | any;
-    weapon_shotgun: Record<string, any> | any;
-    weapon_smg: Record<string, any> | any;
-    weapon_marksman: Record<string, any> | any;
-    weapon_melee: Record<string, any> | any
+    weapon_sniper: any;
+    tacticals: any;
+    lethals: any;
+    weapon_lmg: any;
+    weapon_launcher: any;
+    weapon_pistol: any;
+    weapon_assault_rifle: any;
+    weapon_other: any;
+    weapon_shotgun: any;
+    weapon_smg: any;
+    weapon_marksman: any;
+    weapon_melee: any;
   };
   scorestreakData: {
-    lethalScorestreakData: Record<string, any> | any;
-    supportScorestreakData: Record<string, any> | any
+    lethalScorestreakData: any;
+    supportScorestreakData: any;
   };
   accoladeData: {
     properties: {

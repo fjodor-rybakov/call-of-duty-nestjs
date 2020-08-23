@@ -1,6 +1,6 @@
-import { ActivisionMwMpResponse } from './activision-mw-mp-response';
+import { LifetimeResponse } from './lifetime.response';
 
-export interface ActivisionMwStatsResponse {
+export interface MwDataResponse {
   title: string;
   platform: string;
   username: string;
@@ -17,13 +17,13 @@ export interface ActivisionMwStatsResponse {
   paragonId: number;
   s: number;
   p: number;
-  lifetime: ActivisionMwMpResponse;
+  lifetime: LifetimeResponse;
   weekly: {
     all: {
       properties: any
     };
-    mode: Record<string, any> | any;
-    map: Record<string, any> | any
+    mode: any;
+    map: any
   };
   engagement: any
 }

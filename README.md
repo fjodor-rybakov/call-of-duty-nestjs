@@ -26,7 +26,7 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+NestJS package for Call Of Duty API
 
 ## Installation
 
@@ -38,9 +38,94 @@ OR
 $ yarn add call-of-duty-nestjs
 ```
 
-## Usage
+## Overview
+Configuration
+```typescript
+/*app.module.ts*/
+import { ActivisionModule } from 'call-of-duty-nestjs';
 
-// TODO: add description
+@Module({
+  imports: [ActivisionModule.forRoot({
+    login: '<Activision account login>',
+    password: '<Password for your account>'
+  })]
+})
+export class AppModule {
+}
+```
+Or async
+```typescript
+/*app.module.ts*/
+import { ActivisionModule } from 'call-of-duty-nestjs';
+
+@Module({
+  imports: [ActivisionModule.forRootAsync({
+    useFactory: () => ({
+      login: '<Activision account login>',
+      password: '<Password for your account>'
+    })
+  })]
+})
+export class AppModule {
+}
+```
+Usage
+```typescript
+/*app.controller.ts*/
+
+import { Injectable, Logger } from '@nestjs/common';
+import { 
+  ActivisionService,
+  BattleDataResponse,
+  MwDataResponse,
+  CombatDataResponse
+} from 'call-of-duty-nestjs';
+
+@Injectable()
+export class AppController {
+  private readonly logger = new Logger(AppController.name);
+
+  constructor(
+    private readonly activisionService: ActivisionService
+  ) {
+  }
+
+  getMWBattleData(): Promise<BattleDataResponse> {
+    return this.activisionService.MWBattleData({
+      platform: '<Player platform>',
+      playerName: '<Player name>'
+    });
+  }
+
+  getMWstats(): Promise<MwDataResponse> {
+    return this.activisionService.MWstats({
+      platform: '<Player platform>',
+      playerName: '<Player name>'
+    });
+  }
+  
+  getMWmp(): Promise<MwDataResponse> {
+    return this.activisionService.MWmp({
+      platform: '<Player platform>',
+      playerName: '<Player name>'
+    });
+  }
+
+  getMWcombatwz(): Promise<CombatDataResponse> {
+    return this.activisionService.MWcombatwz({
+      platform: '<Player platform>',
+      playerName: '<Player name>'
+    });
+  }
+
+  getMWcombatmp(): Promise<CombatDataResponse> {
+    return this.activisionService.MWcombatmp({
+      platform: '<Player platform>',
+      playerName: '<Player name>'
+    });
+  }
+}
+```
 
 ## License
 

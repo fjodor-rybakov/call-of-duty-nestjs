@@ -2,9 +2,9 @@ import * as ActivisionAPI from 'call-of-duty-api';
 import { Injectable, OnApplicationBootstrap } from '@nestjs/common';
 import { ActivisionModuleOption } from './interface/activision-module-option';
 import { ActivisionMwDataOptions } from './interface/activision-mw-data-options';
-import { ActivisionMwBattleDataResponse } from './interface/response/activision-mw-battle-data-response';
-import { ActivisionMwStatsResponse } from './interface/response/activision-mw-stats-response';
-import { ActivisionMwCombatDataResponse } from './interface/response/activision-mw-combat-data-response';
+import { MwDataResponse } from './interface/response/mw-data.response';
+import { CombatDataResponse } from './interface/response/combat-data.response';
+import { BattleDataResponse } from './interface/response/battle-data.response';
 
 @Injectable()
 export class ActivisionService implements OnApplicationBootstrap {
@@ -20,35 +20,35 @@ export class ActivisionService implements OnApplicationBootstrap {
 
   public MWcombatmp(
     activisionMwDataOptions: ActivisionMwDataOptions
-  ): Promise<ActivisionMwCombatDataResponse> {
+  ): Promise<CombatDataResponse> {
     const {platform, playerName} = activisionMwDataOptions;
     return ActivisionAPI({platform}).MWcombatmp(playerName);
   }
 
   public MWcombatwz(
     activisionMwDataOptions: ActivisionMwDataOptions
-  ): Promise<ActivisionMwCombatDataResponse> {
+  ): Promise<CombatDataResponse> {
     const {platform, playerName} = activisionMwDataOptions;
     return ActivisionAPI({platform}).MWcombatwz(playerName);
   }
 
   public MWmp(
     activisionMwDataOptions: ActivisionMwDataOptions
-  ): Promise<ActivisionMwStatsResponse> {
+  ): Promise<MwDataResponse> {
     const {platform, playerName} = activisionMwDataOptions;
     return ActivisionAPI({platform}).MWmp(playerName);
   }
 
   public MWstats(
     activisionMwDataOptions: ActivisionMwDataOptions
-  ): Promise<ActivisionMwStatsResponse> {
+  ): Promise<MwDataResponse> {
     const {platform, playerName} = activisionMwDataOptions;
     return ActivisionAPI({platform}).MWstats(playerName);
   }
 
   public MWBattleData(
     activisionMwDataOptions: ActivisionMwDataOptions
-  ): Promise<ActivisionMwBattleDataResponse> {
+  ): Promise<BattleDataResponse> {
     const {platform, playerName} = activisionMwDataOptions;
     return ActivisionAPI({platform}).MWBattleData(playerName);
   }
