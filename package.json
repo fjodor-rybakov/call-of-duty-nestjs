@@ -1,6 +1,6 @@
 {
   "name": "call-of-duty-nestjs",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "NestJS package for Call Of Duty API",
   "author": "fjodor-rybakov",
   "license": "MIT",
