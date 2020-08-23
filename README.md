@@ -47,7 +47,8 @@ import { ActivisionModule } from 'call-of-duty-nestjs';
 @Module({
   imports: [ActivisionModule.forRoot({
     login: '<Activision account login>',
-    password: '<Password for your account>'
+    password: '<Password for your account>',
+    ratelimit: { maxRequests: 2, perMilliseconds: 1000, maxRPS: 2 } // Optional
   })]
 })
 export class AppModule {
@@ -62,7 +63,8 @@ import { ActivisionModule } from 'call-of-duty-nestjs';
   imports: [ActivisionModule.forRootAsync({
     useFactory: () => ({
       login: '<Activision account login>',
-      password: '<Password for your account>'
+      password: '<Password for your account>',
+      ratelimit: { maxRequests: 2, perMilliseconds: 1000, maxRPS: 2 } // Optional
     })
   })]
 })

@@ -23,7 +23,12 @@
     "call of duty",
     "cod",
     "api",
-    "typescript"
+    "typescript",
+    "battle royale",
+    "br",
+    "warzone",
+    "call-of-duty",
+    "modern warfare"
   ],
   "scripts": {
     "prebuild": "rimraf dist",
