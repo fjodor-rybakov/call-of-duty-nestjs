@@ -1,6 +1,6 @@
 {
   "name": "call-of-duty-nestjs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "NestJS package for Call Of Duty API",
   "author": "fjodor-rybakov",
   "license": "MIT",
@@ -22,7 +22,8 @@
     "nestjs",
     "call of duty",
     "cod",
-    "api"
+    "api",
+    "typescript"
   ],
   "scripts": {
     "prebuild": "rimraf dist",

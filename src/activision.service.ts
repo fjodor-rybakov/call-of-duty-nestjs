@@ -14,10 +14,13 @@ export class ActivisionService implements OnApplicationBootstrap {
   }
 
   async onApplicationBootstrap(): Promise<void> {
-    const {login, password} = this.options;
-    await ActivisionAPI().login(login, password);
+    const {login, password, ratelimit} = this.options;
+    await ActivisionAPI({ ratelimit }).login(login, password);
   }
 
+  /**
+   * Get combat multiplayer data
+   */
   public MWcombatmp(
     activisionMwDataOptions: ActivisionMwDataOptions
   ): Promise<CombatDataResponse> {
@@ -25,6 +28,9 @@ export class ActivisionService implements OnApplicationBootstrap {
     return ActivisionAPI({platform}).MWcombatmp(playerName);
   }
 
+  /**
+   * Get combat warzone data
+   */
   public MWcombatwz(
     activisionMwDataOptions: ActivisionMwDataOptions
   ): Promise<CombatDataResponse> {
@@ -32,6 +38,9 @@ export class ActivisionService implements OnApplicationBootstrap {
     return ActivisionAPI({platform}).MWcombatwz(playerName);
   }
 
+  /**
+   * Get multiplayer stats
+   */
   public MWmp(
     activisionMwDataOptions: ActivisionMwDataOptions
   ): Promise<MwDataResponse> {
@@ -39,6 +48,9 @@ export class ActivisionService implements OnApplicationBootstrap {
     return ActivisionAPI({platform}).MWmp(playerName);
   }
 
+  /**
+   * Get all stats
+   */
   public MWstats(
     activisionMwDataOptions: ActivisionMwDataOptions
   ): Promise<MwDataResponse> {
@@ -46,6 +58,9 @@ export class ActivisionService implements OnApplicationBootstrap {
     return ActivisionAPI({platform}).MWstats(playerName);
   }
 
+  /**
+   * Get battle data
+   */
   public MWBattleData(
     activisionMwDataOptions: ActivisionMwDataOptions
   ): Promise<BattleDataResponse> {

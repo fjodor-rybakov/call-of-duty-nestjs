@@ -90,6 +90,9 @@ export class AppController {
   ) {
   }
 
+  /**
+   * Get combat multiplayer data
+   */
   getMWBattleData(): Promise<BattleDataResponse> {
     return this.activisionService.MWBattleData({
       platform: '<Player platform>',
@@ -97,6 +100,9 @@ export class AppController {
     });
   }
 
+  /**
+   * Get combat warzone data
+   */
   getMWstats(): Promise<MwDataResponse> {
     return this.activisionService.MWstats({
       platform: '<Player platform>',
@@ -104,13 +110,19 @@ export class AppController {
     });
   }
   
+  /**
+   * Get multiplayer stats
+   */
   getMWmp(): Promise<MwDataResponse> {
     return this.activisionService.MWmp({
       platform: '<Player platform>',
       playerName: '<Player name>'
     });
   }
-
+  
+  /**
+   * Get all stats
+   */
   getMWcombatwz(): Promise<CombatDataResponse> {
     return this.activisionService.MWcombatwz({
       platform: '<Player platform>',
@@ -118,6 +130,9 @@ export class AppController {
     });
   }
 
+  /**
+   * Get battle data
+   */
   getMWcombatmp(): Promise<CombatDataResponse> {
     return this.activisionService.MWcombatmp({
       platform: '<Player platform>',
